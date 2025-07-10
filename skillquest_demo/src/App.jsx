@@ -1,5 +1,6 @@
 import logo from './assets/logo.png'
 import { useState } from 'react'
+import SkillTreePage from './SkillTreePage'
 
 function App() {
   const [inputValue, setInputValue ] = useState('')
@@ -65,9 +66,7 @@ function App() {
       )}
 
       {response && (
-        <div className='text-green-600 font-semibold text-xl'>
-          ✅ Response received! Check the console for now.
-        </div>
+          <SkillTreePage skillData = {response}/>
       )}
     </div>
   )
